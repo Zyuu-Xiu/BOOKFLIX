@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOOKFLIX Register</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="panel" style="max-width:420px;margin-top:100px">
+    <h1 class="logo">BOOK<span>FLIX</span></h1>
+    <h2 style="margin:25px 0">Create Account</h2>
+
+    <form id="registerForm">
+        <input id="name" placeholder="Full Name" required>
+
+        <input id="email" type="email"
+        placeholder="Email Address" required>
+
+        <input id="password" type="password"
+        minlength="8" placeholder="Password (min 8 characters)"
+        required>
+
+        <button class="red-button" type="submit">
+            Create Account
+        </button>
+    </form>
+
+    <p id="message" style="margin-top:20px"></p>
+
+    <p style="margin-top:20px">
+        Already have an account?
+        <a href="login.html" style="color:#e50914">
+            Login
+        </a>
+    </p>
+</div>
+
+<script type="module" src="js/auth.js"></script>
+</body>
+</html>

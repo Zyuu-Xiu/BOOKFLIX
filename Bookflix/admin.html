@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOOKFLIX Administrator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">BOOK<span>FLIX</span></a>
+    <span>ADMINISTRATOR PANEL</span>
+    <a href="index.html">Back to Website</a>
+</header>
+
+<main class="panel">
+    <h1>Administrator Dashboard</h1>
+    <p id="adminStatus">Checking access...</p>
+
+    <div id="adminContent" hidden>
+
+        <h2 style="margin-top:30px">Add / Edit Book</h2>
+
+        <form id="bookForm">
+            <input type="hidden" id="bookId">
+
+            <label>Book Title</label>
+            <input id="title" required>
+
+            <label>Author</label>
+            <input id="author" required>
+
+            <label>Category</label>
+            <select id="category">
+                <option>Romance</option>
+                <option>Horror</option>
+                <option>Mystery</option>
+                <option>Fantasy</option>
+                <option>Adventure</option>
+            </select>
+
+            <label>Synopsis</label>
+            <textarea id="synopsis" required></textarea>
+
+            <label>Book Cover</label>
+            <input type="file" id="cover" accept="image/*">
+
+            <label>Video Preview</label>
+            <input type="file" id="video" accept="video/*">
+
+            <label>Publishing Status</label>
+            <select id="status">
+                <option value="draft">Draft</option>
+                <option value="published">Published</option>
+            </select>
+
+            <button class="red-button" type="submit">
+                Save Book
+            </button>
+
+            <button type="button" id="cancelEdit">
+                Cancel Edit
+            </button>
+        </form>
+
+        <hr style="margin:30px 0;border-color:#444">
+
+        <h2>Add Chapter</h2>
+
+        <form id="chapterForm">
+            <label>Select Book</label>
+            <select id="chapterBook" required></select>
+
+            <label>Chapter Number</label>
+            <input id="chapterNumber" type="number" min="1" required>
+
+            <label>Chapter Title</label>
+            <input id="chapterName" required>
+
+            <label>Story Content</label>
+            <textarea id="chapterContent" required></textarea>
+
+            <button class="red-button" type="submit">
+                Add Chapter
+            </button>
+        </form>
+
+        <hr style="margin:30px 0;border-color:#444">
+
+        <h2>Manage Books</h2>
+        <div id="manageBooks"></div>
+
+        <p id="adminMessage"></p>
+    </div>
+</main>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOOKFLIX Reader</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">BOOK<span>FLIX</span></a>
+    <a href="index.html">← Back to Library</a>
+</header>
+
+<main class="panel">
+    <div id="bookInfo">Loading book...</div>
+
+    <div id="chapterList"></div>
+
+    <hr style="margin:25px 0;border-color:#444">
+
+    <article id="story">
+        <h2 id="chapterTitle"></h2>
+        <div id="storyContent" style="line-height:2;white-space:pre-wrap;margin-top:20px"></div>
+    </article>
+
+    <div style="display:flex;gap:15px;margin-top:25px">
+        <button class="red-button" id="previousBtn">Previous</button>
+        <button class="red-button" id="nextBtn">Next Chapter</button>
+    </div>
+
+    <p id="progressMessage" style="margin-top:15px;color:#aaa"></p>
+</main>
+
+<section class="panel">
+    <h2>Rate This Book</h2>
+
+    <select id="rating">
+        <option value="5">★★★★★ - Excellent</option>
+        <option value="4">★★★★ - Very Good</option>
+        <option value="3">★★★ - Good</option>
+        <option value="2">★★ - Fair</option>
+        <option value="1">★ - Poor</option>
+    </select>
+
+    <button class="red-button" id="rateBtn">Submit Rating</button>
+    <p id="ratingResult"></p>
+</section>
+
+<section class="panel">
+    <h2>Comments & Reviews</h2>
+
+    <form id="commentForm">
+        <textarea id="commentText"
+        placeholder="Share your thoughts..." required></textarea>
+        <button class="red-button">Post Comment</button>
+    </form>
+
+    <div id="comments"></div>
+</section>
+
+<script type="module" src="js/reader.js"></script>
+</body>
+</html>
+
+<button class="red-button" id="favouriteBtn">
+    ❤️ Add to My List
+</button>
